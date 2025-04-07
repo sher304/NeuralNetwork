@@ -57,4 +57,13 @@ public class Perceptron {
     public double[] getWeights() {
         return weights;
     }
+
+    public double net(double[] input) {
+        double sum = 0.0;
+        for (int i = 0; i < input.length; i++) {
+            sum += input[i] * weights[i];
+        }
+        return sum - threshold;
+    }
+
 }
